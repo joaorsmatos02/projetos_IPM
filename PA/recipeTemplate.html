@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <head>
+        <title>Frigorífico Inteligente: Receita</title>
+        <link rel="stylesheet" href="position.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="grid-container-recipeList" id="grid-container-recipeList">
+            <div class="headerAddRecepies">
+                <i id="leftArrow" class="fa fa-arrow-left" onclick="goBack()"></i>
+                <p id="voltar">Voltar</p>
+            </div>
+            <img src="" id="recipeTemplateImage" style="position: absolute;"/>
+            <div class="formRecipeList" id="formRecipeList">
+                <b><label for="fname" style="font-size: 30px; padding: 1px;" id="recipeTittle">Nome Receita</label></b><br><br>
+                <span id="preparationTime"> <b>Tempo de preparação:</b> </span>
+                <span>min</span>
+                <p id="ingredients"><b>Ingredientes:</b> </p>
+                <ul id = "listaIngredientes"></ul>
+                <p id="preparação"><b style="font-size: 23px;">Preparação:</b> </p>
+                <button id="removeRecipe" onclick="removeRecipe()">Remover Receita &nbsp;&nbsp;<i class="fa fa-trash-o"></i></button>
+            </div>
+        </div>
+    </body>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="recipeTemplate.js"></script>
+</html>

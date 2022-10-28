@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <head>
+        <title>Frigorifico Inteligente: Lista de Receitas</title>
+        <link rel="stylesheet" href="position.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload = "load()">
+        <div class="grid-container-recipeList" id="grid-container-recipeList">
+            <div class="headerAddRecepies">
+                <i id="leftArrow" class="fa fa-home" onclick="document.location = 'index.html'"></i>
+                <p id="voltar" style="text-indent: 1px;">Início</p>
+            </div>             
+            <div class="formRecipeList" id="formRecipeList">
+                <label for="fname" style="font-size: 30px; padding: 1px;">Lista de Receitas</label>
+                <ul id = "listaReceitas">
+                    <li>Fettuccine Alfredo</li>
+                    <li>Pizza Pepperoni</li>
+                    <li>Salada Sortida</li>
+                    <li>Sopa de vegetais e macarrão</li>
+                    <li>Bolo de Cereja</li>
+                </ul>
+                <button id="addRecipeInList" onclick="document.location = 'adicionarReceita.html'">Adicionar Receita</button> 
+            </div>
+            <img src="" id="output"/>
+        </div>
+    </body>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="behaviourListaReceita.js"></script>
+</html>

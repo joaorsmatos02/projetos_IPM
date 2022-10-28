@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <head>
+        <title>Frigorífico Inteligente: Início</title>
+        <link rel="stylesheet" href="position.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="editName" id="editName" hidden>
+            <span>
+                <input type="text" id="userName" name="userName" autocomplete="off" Maxlength="25">
+                <span>
+                    <button id="confirmarEditarNome" onclick="editName()">&#10004;</button>
+                    <button id="nãoEditarNome" onclick="cancelEditName()">&#10006;</button>
+                </span>
+            </span>
+        </div>
+
+        <div class="liveCam" id="liveCam" hidden>
+            <i class="fa fa-close" id="closeLiveCam" onclick="closeLiveCam()" style="font-size:48px;color:red"></i>
+            <img id=liveGif src="live.gif" alt="liveGif">
+            <img id=liveCamImg src="interiorFridge.png" alt="liveCam">
+        </div>
+
+        <div class="grid-container" id="grid-container">
+            <div class="header" id="header">
+                <span style="color: #299cff">Olá, </span>
+                <span id="editNameLabel" style="color:white">Utilizador! </span>
+                <i class="fa fa-camera" id="cam" onclick="liveCamShowUp()" style="margin-left: -10px; font-size: 29px;"></i>
+                <i class="fa fa-edit" id="edit" onclick="editNameMenu()"></i>
+                <p style="font-size: 12px; margin-left: 772px; margin-top: -15px;">Editar nome</p>
+                <span>
+                    <p style="font-size: 12px; margin-left: 857px; margin-top: -26px;">Interior </p>
+                </span>
+            </div>
+       
+        <div class="hours-menu">
+            <i class="fa fa-location-arrow" id = "locationIcon">
+                <span style="font-size: 18px; margin-left: 6px; color: #ebebeb">Lisboa, Portugal
+                    <i class="fa fa-cloud" style="font-size:25px; position:absolute; right:5%;"></i>
+                </span>
+            </i>
+            <div id="MyClockDisplay" class="clock" onload="alert()"></div>
+
+            <div class="bottom-hours-menu-left">
+                <p class="fstDegree">18ºC<span class="sndDegree">/11ºC</span></p>
+            </div>
+            <div class="bottom-hours-menu-right">
+                <span class="dot1"></span>
+                <span class="dot2"></span>
+                <span class="dot1"></span>
+                <span class="dot1"></span>
+                <span class="dot1"></span>
+                <span class="dot1"></span>
+                <span class="dot1"></span>
+            </div>
+        </div>
+
+        <div class="fridge-menu">Temperatura <br>Frigorífico<span style="font-size: 18px; color: #adadad"> (ºC)</span>
+            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <div class = temperatureFridge>
+                <input id=temperatureNumber type=number min=-5 max=12 value="5">
+                <button id=plusMinusButton onclick="decrement()">-</button> 
+                <button id=plusMinusButton onclick="increment()" style="position:absolute; right:0;">+</button>
+            </div>
+        </div>  
+
+        <div class="water-menu">Dispensador<br>de água
+            <p id="percentageNumber"><script>document.getElementById("percentageNumber").innerHTML = Math.floor(Math.random() * 101);</script>%</p>
+        </div>
+
+        <div class="storageAux-menu">Produtos</div>
+        <div class="storage-menu">
+            <div class ="storage-menuGrid">
+                <div class="produto1">
+                    <img id="prod1Img" src="" alt="prod1">
+                    <label id="prod1"></label>
+                    <p id="qtdProd1" style="margin-top: 0%; font-size: 15px; color:#eee"></p>
+                </div>
+                <div class="produto2">
+                    <img id=prod2Img src="" alt="prod2">
+                    <label id="prod2"></label>
+                    <p id="qtdProd2" style="margin-top: 0%;font-size: 15px; color:#eee"></p>
+                </div>
+                <div class="produto3">
+                    <img id="prod3Img" src="" alt="prod3">
+                    <label id="prod3"></label>
+                    <p id="qtdProd3" style="margin-top: 0%;font-size: 15px; color:#eee"></p>
+                </div>
+            </div>
+        </div>
+        <div class="siri-menu"><p>Como posso ajudar?</p>
+            <img id=siri src="siri.gif" alt="siri">
+        </div>
+        <div class="recepiesAux-menu">Receitas</div>
+
+        <div class="recepies-menu">
+            <div class="recepies1" id="recepies1">
+                <img id="recipe1" src="" alt="recipe1" ALIGN="left"><label id="recipeName1">Nome Receita</label>
+                <!-- &ensp; comando tab -->
+                <i id=clockIcon class="fa fa-clock-o">
+                    <span id="prepTime1" style="font-size: 18px;"> 25 minutos</span>
+                    <span style="font-size:20px; position:absolute; right: -131%;"><i id=heartIcon class="fa fa-heart" onclick="changeHeartColor()"></i></span>
+                </i>
+            </div>
+
+            <div class="recepies2">
+                <img id=recipe2 src="" alt="recipe2" ALIGN="left"><label id="recipeName2">Nome Receita</label>
+                <!-- &ensp; comando tab -->
+                <i id=clockIcon class="fa fa-clock-o">
+                    <span id="prepTime2" style="font-size: 18px;">30 minutos</span>
+                    <span style="font-size:20px; position:absolute; right: -130%;"><i id=heartIcon2 class="fa fa-heart" onclick="changeHeartColor2()"></i></span>
+                </i>
+            </div>
+            <div class="recepiesAdd">
+                <button class = button-64 id="recipeListButtonIndex" onclick="document.location='listaReceitas.html'">Lista de Receitas</button>
+                <button class = button-64 id="addRecipeButtonIndex" onclick="document.location='adicionarReceita.html'">Adicionar Receita</button>
+            </div>    
+        </div>
+    </div>
+        <script src="behaviour.js"></script>
+    </body>
+</html>
+
+

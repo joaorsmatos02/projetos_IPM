@@ -1,0 +1,298 @@
+.header { grid-area: header; }
+.hours-menu { grid-area: hours-menu; }
+.fridge-menu { grid-area: fridge-menu; }
+.water-menu { grid-area: water-menu; }
+.storageAux-menu { grid-area: storageAux-menu; }
+.storage-menu { grid-area: storage-menu; }
+.siri-menu { grid-area: siri-menu; }
+.recepiesAux-menu { grid-area: recepiesAux-menu; }
+.recepies-menu { grid-area: recepies-menu; }
+.recepies1 {grid-area: recepies1}
+.recepies2 {grid-area: recepies2}
+.recepiesAdd {grid-area: recepiesAdd}
+
+.grid-container {
+    margin: auto;
+    width: 48%;
+    display: grid;
+    grid-template-columns: 170px 120px 248px 60px;
+    grid-template-rows: 100px 210px 45px 210px 45px 210px;
+
+    grid-template-areas:
+      'header header header header header header'
+      'hours-menu hours-menu fridge-menu fridge-menu water-menu water-menu'
+      'storageAux-menu storageAux-menu storageAux-menu storageAux-menu storageAux-menu storageAux-menu'
+      'storage-menu storage-menu storage-menu storage-menu siri-menu siri-menu'
+      'recepiesAux-menu recepiesAux-menu recepiesAux-menu recepiesAux-menu recepiesAux-menu recepiesAux-menu'
+      'recepies-menu recepies-menu recepies-menu recepies-menu recepies-menu recepies-menu';
+
+    gap: 10px;
+    padding: 20px;
+  }
+
+.grid-container > div {
+    padding: 5px 0;
+    padding-left: 5%;
+}
+
+#liveCam {
+  position: absolute;
+  z-index: 1;
+  top: 53%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#closeLiveCam {
+  position: absolute;
+  top: 1%;
+  left: 93%;
+}
+
+#liveGif {
+  position: absolute;
+  width: 130px;
+  top: 1%;
+  left: 1%;
+}
+
+.header{
+  margin-left: -5%;
+}
+
+.header i {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 0px;
+  float: right;
+  margin-top: -10px;
+}
+
+.editName {
+  position: absolute;
+  top: 6.3%;
+  left: 41.2%;
+  transform: translate(-50%, -50%);
+
+}
+
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.bottom-hours-menu-left p {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+}
+
+.bottom-hours-menu-right {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+
+.fridge-menu {
+  position: relative;
+}
+
+.temperatureFridge {
+  position: absolute;
+  top: 60%;
+  left: 55%;
+  transform: translate(-50%, -50%)
+}
+
+.water-menu {
+  position: relative;
+}
+#percentageNumber {
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.storageAux-menu {
+  margin-left: -5%;
+}
+
+.storage-menu {
+  position: relative;
+}
+
+#rightArrow {
+  position: absolute;
+  top: 50%;
+  left: 97%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: rgb(188, 188, 188);
+}
+
+.produto1 {grid-area: produto1}
+.produto2 {grid-area: produto2}
+.produto3 {grid-area: produto3}
+.storage-menuGrid {
+  margin-left: -5%;
+  width: 97%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 160px;
+  grid-template-areas:
+    'produto1 produto2 produto3';
+  gap: 10px;
+  padding: 20px;
+}
+
+.produto1, .produto2, .produto3 {
+  position: relative;
+  height: 170px;
+  margin-top: 10%;
+}
+
+.siri-menu {
+  position: relative;
+}
+
+#siri {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.recepiesAux-menu {
+  margin-left: -5%;
+}
+
+.recepies-menu {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 280px 340px 250px;
+  grid-template-rows: 200px;
+  grid-template-areas:
+  'recepies1 recepies2 recepiesAdd';
+  gap: 10px;
+}
+
+.recepies1 {
+  margin-left: -14%;
+  position: relative;
+}
+
+.recepies2 {
+  position: relative;
+  margin-left: 5%;
+}
+
+#clockIcon{
+  position: absolute;
+  bottom: 4%;
+  left: -4%;
+}
+
+.recepiesAdd {
+  position: relative;
+
+}
+
+#addRecipeButtonIndex {
+  position: absolute;
+  top: 74%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+#recipeListButtonIndex {
+  position: absolute;
+  top: 20%;       
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+
+.headerAddRecepies {grid-area: headerAddRecepies}
+.form {grid-area: form}
+
+.grid-container-addRecepies {
+  margin: auto;
+  width: 48%;
+  display: grid;
+  grid-template-columns: 130px auto;
+  grid-template-rows: 100px 750px;
+
+  grid-template-areas:
+    'headerAddRecepies'
+    'form';
+  gap: 10px;
+  padding: 20px;
+}
+
+.grid-container-addRecepies > div {
+  padding: 5px 0;
+  padding-left: 5%;
+  position: relative;
+}
+
+#voltar {
+  text-indent: 0px;
+  margin-top: 4px;
+}
+
+#form {
+  display:table;
+  text-align:left;
+  margin-left: 23px;
+  margin-top: -16px;
+}
+
+#addRecipeButton, #cancelButton {
+  float: right;
+}
+
+#imgfile {
+  position: absolute;
+  top: 18%;
+  left: 62%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#output {
+  position: absolute;
+  top: 36%;
+  left: 62%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width:300px;
+  max-height:280px;
+}
+
+.alert {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#recipeTemplateImage {
+  position: sticky;
+  display: block;
+  margin-top: 3%;
+  margin-left: 30%; 
+}
+
+#addRecipeInList {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+}
+

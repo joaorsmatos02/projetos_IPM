@@ -1,0 +1,15 @@
+.target {
+    width: 47px;
+    height: 47px;
+    border: 1px solid #808080;
+}
+
+.goal-0 {
+    background-color: red;
+}
+
+.goal-1 {
+    background-color: red;
+    opacity: 0.4;
+    border: 1px solid #808080;
+}

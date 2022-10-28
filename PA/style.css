@@ -1,0 +1,759 @@
+*{
+    color: white;
+    font-family: 'Product Sans';
+    z-index: 2;
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  }
+
+.grid-container {
+    background: linear-gradient(to right, rgb(0, 6, 62), rgb(0, 40, 75));
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+#liveCam {
+    border-radius: 10px;
+    border: 5px solid rgb(27, 6, 67);
+}
+
+#closeLiveCam:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.header {
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.editName {
+    text-align: center;
+    padding: 20px;
+    background: transparent;
+    color: black;
+    width: 35%;
+    transition: .5s linear;
+    border-radius: 5px;
+}
+
+#userName {
+    color: white;
+    font-size: 29px; 
+    background: transparent;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    outline: 0;
+}
+
+#userName:focus{
+    border: 2px solid blue;
+    transition: 0.5s;;
+}
+
+#userName::placeholder{
+    font-size: 25px;
+}
+
+#confirmarEditarNome {
+    width: 35px;
+    height: 35px;
+    font-size: 17px;
+    background-image: linear-gradient(-180deg, #00d74b, #078003);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    outline: 0;
+    padding: 5px;
+    text-align: center;
+    border: 0;
+    vertical-align: middle;
+    margin-left: 1%;
+    margin-top: -3%;
+}
+
+#nãoEditarNome {
+    width: 35px;
+    height: 35px;
+    font-size: 17px;
+    background-image: linear-gradient(-180deg, #e31313, #750d0d);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    outline: 0;
+    padding: 5px;
+    vertical-align: middle;
+    text-align: center;
+    border: 0;
+    margin-left: 0.5%;
+    margin-top: -3%;
+}
+
+#edit {
+    margin-right: 2%;
+}
+
+#edit:hover, #cam:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hours-menu{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #272a42 0%, #252841 74%);
+    font-size: 30px;
+    border-radius: 5px;
+    position: relative;
+
+}
+
+.hours-menu:hover{
+    transform: scale(1.01); 
+}
+
+#locationIcon {
+    font-size: 20px;
+    margin: 0;
+    color: #299cff;
+
+}
+
+.clock {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.bottom-hours-menu-left p {
+    font-size: 18px;
+}
+
+p.fstDegree { 
+    color:white;
+    font-size:18px;
+}
+
+span.sndDegree { 
+    color: #adadad;
+    font-size:18px;
+}
+
+.dot1 {
+   height: 5px;
+   width: 5px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+}
+
+.dot2 {
+   height: 6px;
+   width: 6px;
+   background-color: #299cff;
+   border-radius: 50%;
+   display: inline-block;
+}  
+
+.fridge-menu{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #625a83 0%, #0d324d 74%);   
+    border-radius: 5px;
+    font-size: 28px;
+}
+
+.fridge-menu:hover{
+    transform: scale(1.01); 
+}
+
+#temperatureNumber {
+    background-color: transparent;
+    color: white;
+    height: 100px;
+    width: 90px;
+    border: transparent;
+    font-size: 90px;
+}
+
+/* Chrome - Retirar setas de "number box"*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#plusMinusButton{
+    background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+	background-color:#1e62d0;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    width: 38px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#plusMinusButton:hover {
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+  }
+
+
+.water-menu{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;    
+    background-color: #20588c;
+    background-image: linear-gradient(315deg, #0cbaba 0%, #20588c 74%);
+    font-size: 30px;
+    border-radius: 5px;
+
+}
+
+.water-menu:hover{
+    transform: scale(1.01);
+}
+
+#percentageNumber {
+    border: transparent;
+    font-size: 60px;
+  }
+
+.storageAux-menu {
+    font-size: 30px;
+}
+
+.storage-menu {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #202235 0%, #252841 74%);
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.storage-menu:hover{
+    transform: scale(1.01); 
+}
+
+.produto1, .produto2, .produto3 {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#prod1Img, #prod2Img, #prod3Img {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* #cheese {
+    width: 64%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pimento {
+    width: 54%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.dot3 {
+    height: 5px;
+    width: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    float: right;
+    margin: 2px;
+ }
+ 
+ .dot4 {
+    height: 5px;
+    width: 5px;
+    background-color: #299cff;
+    border-radius: 50%;
+    float: right;
+    margin: 2px;
+ } 
+
+.siri-menu{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #232746 0%, #1c1e2f 74%);
+    border-radius: 5px;
+}
+
+.siri-menu:hover{
+    transform: scale(1.01); 
+}
+
+.siri-menu p{
+    font-size: 28px;
+    padding: 12px;
+    margin-top: -3%;
+    margin-left: -2%;
+}
+
+#siri {
+    width: 290px;
+}
+
+.recepiesAux-menu {
+    font-size: 30px;
+}
+
+.recepies-menu {
+    background-color: transparent;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.recepies1 {
+    font-size: 28px;
+    text-indent: 22px;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgb(1, 11, 97), rgb(0, 40, 75));
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.recepies1:hover{
+    transform: scale(1.01); 
+}
+
+.recepies2 {
+    font-size: 28px;
+    text-indent: 22px;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgb(1, 11, 97), rgb(0, 40, 75));
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+ }
+
+.recepies2:hover{
+    transform: scale(1.01); 
+}
+
+#recipe1, #recipe2 {
+    width: 45%;
+    border-radius: 5px;
+}
+
+#heartIcon:hover, #heartIcon2:hover {
+    color: red;
+    transform: scale(1.1);
+    
+}
+
+#addRecipeButtonIndex {
+    height: 90px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #0a720f 0%, #02a127 74%);
+    border-radius: 5px;
+    border: transparent;
+}
+
+#addRecipeButtonIndex:hover{
+    background-image: linear-gradient(315deg, rgb(9, 127, 15) 0%, #07b52f 74%);
+}
+
+#recipeListButtonIndex {
+    height: 90px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #272785 0%, #0268a2 74%);
+    color: white; 
+    border-radius: 5px;
+    border: transparent;
+}
+
+#recipeListButtonIndex:hover{
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #282897 0%, #0375b6 74%);
+}
+
+.grid-container-addRecepies {
+    background: linear-gradient(to right, rgb(0, 6, 62), rgb(0, 40, 75));
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+.grid-container-addRecepies input[type=text] {
+    background-color: black;
+}
+
+.grid-container-addRecepies input[type=submit] {
+    background-color: black;
+}
+
+#leftArrow {
+    font-size: 40px;
+}
+
+#leftArrow:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#imgfile {
+    border: 1px dashed #fff;
+    padding: 5px;
+    width: 310px;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+    width: 1px;
+}
+
+.custom-file-input::before {
+    content: 'Escolher imagem';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    cursor: pointer;    
+    font-size: 10pt;
+}
+
+.custom-file-input:hover::before {
+    border-color: rgb(29, 29, 188);
+}
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+
+#imgfile:hover {
+    cursor: pointer;
+    border-color: rgb(19, 19, 173);
+}
+  
+
+#form {
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgb(30, 33, 52) 0%, rgb(27, 32, 66) 41%, rgb(28, 32, 61) 74%, rgb(30, 33, 52) 100%);
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 10px  rgb(19, 19, 100);
+    box-shadow: 0 0 10px rgb(19, 19, 100);
+    border-radius: 10px;
+    padding: 20px;
+    height: 1px;
+}
+
+#nomeReceita {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    border-bottom: 2px solid #eee;
+    font-size: 20px;
+    width: 35%;
+    color: rgb(255, 255, 255);
+    outline: none;
+}
+
+#nomeReceita:focus{
+    border-bottom: 2px solid rgb(29, 29, 188);
+    transition: 0.5s;
+}
+
+#tempoReceita {
+    background-color: #303245;
+    width: 40px;
+    text-align: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 4px;
+    border: 1px solid rgb(93, 93, 94);
+    outline: 0;
+    font-size: 19px;
+}
+
+#ingrediente {
+    margin-top: 5px;
+    width: 30%;
+    background-color: #303245;
+    border-radius: 4px;
+    border: 1px solid rgb(93, 93, 94);
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 20px;
+    outline: 0;
+    padding: 2px 6px 0;
+}
+
+#ingrediente:focus{
+    border: 1px solid rgb(29, 29, 188);
+    transition: 0.2s;
+}
+
+#qtd {
+    text-align: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 35px;
+    height: 25px;
+    color: #eee;
+    background-color: #303245;
+    border-radius: 4px;
+    border: 1px solid rgb(93, 93, 94);
+    outline: 0;
+    font-size: 20px;
+    margin-top: -8px;
+}
+
+#qtd:focus{
+    border: 1px solid rgb(29, 29, 188);
+    transition: 0.2s;
+}
+
+#textArea {
+    background-color: #303245;
+    border-radius: 4px;
+    border: 1px solid rgb(93, 93, 94);
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 20px;
+    outline: 0;
+    resize: none;
+    margin-top: -1%;
+}
+
+#textArea:focus{
+    border: 2px solid rgb(23, 23, 129);
+    transition: 0.2s;
+}
+
+#addRecipeButton {
+    width: 220px;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #29a938 0%, #28be3a 74%);
+    color: white; 
+    border-radius: 5px;
+    border: transparent;
+}
+
+#cancelButton {
+    width: 220px;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: #bd4f6c;
+    background-image: linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%);
+    color: white; 
+    border-radius: 5px;
+    border: transparent;
+}
+
+
+.alert {
+    text-align: center;
+    padding: 20px;
+    background-color: #990000;
+    background-image: linear-gradient(147deg, #b70909 0%, #cb0404 74%);
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 10px  rgb(52, 9, 9);
+    box-shadow: 0 0 10px rgb(60, 4, 4);
+    color: white;
+    width: 25%;
+    transition: .5s linear;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#não {
+    width: 100px;
+    padding: 9px 9px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 19px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #bd4f6c;
+    background-image: linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%);
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 10px  rgb(52, 9, 9);
+    box-shadow: 0 0 10px rgb(60, 4, 4);
+    color: white; 
+    border-radius: 5px;
+    border: transparent;
+}
+
+#sim {
+    width: 100px;
+    padding: 9px 9px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 19px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 10px  rgb(52, 9, 9);
+    box-shadow: 0 0 10px rgb(60, 4, 4);
+    background-image: linear-gradient(315deg, #29a938 0%, #28be3a 74%);
+    color: white; 
+    border-radius: 5px;
+    border: transparent;
+}
+
+.grid-container-recipeList {
+    background: linear-gradient(to right, rgb(0, 6, 62), rgb(0, 40, 75));
+    margin: auto;
+    width: 48%;
+    height: 850px;
+    padding: 1%;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+
+
+#formRecipeList {
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgb(30, 33, 52) 0%, rgb(27, 32, 66) 41%, rgb(28, 32, 61) 74%, rgb(30, 33, 52) 100%);
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 10px  rgb(19, 19, 100);
+    box-shadow: 0 0 10px rgb(19, 19, 100);
+    border-radius: 10px;
+    padding: 20px;
+    height: 700px;
+}
+
+#listaReceitas {
+    position: relative;
+    padding: 3%;
+}
+
+#listaReceitas {
+    list-style: none;
+    padding: 1%;
+    font-size: 25px;
+}
+
+#listaReceitas li::before {
+    content: "‣ ";
+    color: blue;
+    padding: 1.1%;
+    font-size: 25px;
+}
+
+#listaReceitas li {
+    padding: 1%;
+    width: 50%;
+}
+
+#listaReceitas li:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    font-weight: bold;
+    background-color: rgb(36, 45, 113);
+    border-radius: 10px;
+}
+
+#addRecipeInList {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #272785 0%, #0268a2 74%);
+    color: white; 
+    border-radius: 5px;
+    border: transparent;
+}
+
+#addRecipeInList:hover {
+    cursor: pointer;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2020a8 0%, #1779b1 74%);
+    cursor: pointer;
+}
+
+#recipeTittle {
+    font-size: 30px;
+}
+
+#preparationTime {
+    font-size: 23px;
+}
+
+#ingredients {
+    font-size: 23px;
+}
+
+#listaIngredientes {
+    font-size: 20px;
+}
+
+#preparação {
+    font-size: 20px;
+}
+
+#removeRecipe {
+    position: relative;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: #bd4f6c;
+    background-image: linear-gradient(326deg, #c82e35 0%, #ac3110 74%);
+    color: white; 
+    border-radius: 5px;
+    border: transparent;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#removeRecipe:hover {
+    background-color: #2a2a72;
+    background-image: linear-gradient(326deg, #e0333c 0%, #c6330a 74%);
+    cursor: pointer;
+}
